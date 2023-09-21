@@ -1,19 +1,19 @@
 import { useLoaderData } from "react-router-dom";
-import User from "../User/User";
+import Post from "../Post/Post";
 
 
-const Users = () => {
-    const users = useLoaderData()
+const Posts = () => {
+    const posts = useLoaderData();
     return (
         <div>
-            <h2>user page</h2>
+            <h2>Posts is here:</h2>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {
-                    users.map(user =><User key={user.id} user={user}></User>)
+                    posts.map(post=> <Post key={post.id} post={post}></Post>)
                 }
             </div>
         </div>
     );
 };
 
-export default Users;
+export default Posts;
